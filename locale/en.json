@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Qwen model refresh",
+    "description": "Refreshes Qwen Token Plan model lists every hour: queries the provider's /models endpoint and adds newly released chat models to the configured routes. Additive only — existing models and their settings are preserved. The API key is resolved at runtime from the credential store and never written into configuration.",
+    "detail": "docs/DETAIL.md"
+  }
+}

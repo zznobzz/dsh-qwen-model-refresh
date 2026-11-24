@@ -1,0 +1,19 @@
+# qwen-model-refresh: hourly model-list refresh for Qwen Token Plan routes.
+- insert:
+    - id: qwen-model-refresh
+      name: dsh-qwen-model-refresh
+      config:
+        # Provider routes to refresh. A route is processed only when it is
+        # configured in the llm-pi-ai settings section; unknown or unconfigured
+        # routes are skipped with a log line.
+        providers:
+          - qwen-token-plan
+          - qwen-token-plan-individual
+          - qwen-token-plan-cn
+        # Refresh period in minutes (minimum 1).
+        intervalMinutes: 60
+        # Run one refresh cycle shortly after the profile settles.
+        runOnStart: true
+        # Case-insensitive regex of model ids to ignore (non-chat models and
+        # the router alias). Uncomment to override the built-in default:
+        # excludePattern: '(^auto$|image|audio|video|tts|asr|^wan)'

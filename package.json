@@ -1,0 +1,38 @@
+{
+  "name": "dsh-qwen-model-refresh",
+  "version": "1.0.2",
+  "description": "Hourly refresh of Qwen Token Plan model routes for DeepSeek Harness: discovers newly released chat models and adds them to the configured provider routes.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zznobzz/dsh-qwen-model-refresh.git"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "qwen",
+    "token-plan",
+    "llm",
+    "models"
+  ]
+}
